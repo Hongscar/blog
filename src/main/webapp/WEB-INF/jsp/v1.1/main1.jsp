@@ -156,9 +156,16 @@
                 </a>
             </div>
         </div>
+
     </div>
+
 </div>
 
+<div class="container">
+    <center>
+        <a href="http://beian.miit.gov.cn/state/outPortal/loginPortal.action">粤ICP备19122452号-1</a>
+    </center>
+</div>
 
 </body>
 

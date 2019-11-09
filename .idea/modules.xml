@@ -2,8 +2,12 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+<<<<<<< HEAD
       <module fileurl="file://$PROJECT_DIR$/hong.iml" filepath="$PROJECT_DIR$/hong.iml" />
       <module fileurl="file://F:/ssm-demo-master/ssm-maven/ssm-maven.iml" filepath="F:/ssm-demo-master/ssm-maven/ssm-maven.iml" />
+=======
+      <module fileurl="file://$PROJECT_DIR$/../../../../IntelliJ_project/blog/blog.iml" filepath="$PROJECT_DIR$/../../../../IntelliJ_project/blog/blog.iml" />
+>>>>>>> 4dc0be95625d89c2be28b144cc227f32f65e5590
     </modules>
   </component>
 </project>

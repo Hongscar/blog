@@ -31,7 +31,7 @@
     <bean id="wall-filter" class="com.alibaba.druid.wall.WallFilter"
           p:dbType="mysql"
           p:config="wall-filter-config"
-          />
+    />
 
     <bean id="druid-stat-interceptor" class="com.alibaba.druid.support.spring.stat.DruidStatInterceptor"/>
 
@@ -53,10 +53,10 @@
           p:url="your_db_url"
           p:username="root"
           p:password="your_root_password">
-    <!--<property name="driver" value="${jdbc.driverClassName}"/>-->
-    <!--<property name="url" value="${jdbc.url}"/>-->
-    <!--<property name="username" value="${jdbc.username}"/>-->
-    <!--<property name="password" value="${jdbc.password}"/>-->
+        <!--<property name="driver" value="${jdbc.driverClassName}"/>-->
+        <!--<property name="url" value="${jdbc.url}"/>-->
+        <!--<property name="username" value="${jdbc.username}"/>-->
+        <!--<property name="password" value="${jdbc.password}"/>-->
 
         <property name="proxyFilters">
             <list>
@@ -69,16 +69,16 @@
           class="org.mybatis.spring.SqlSessionFactoryBean"
           p:dataSource-ref="dataSource"
 
-          />
+    />
 
     <bean class="org.mybatis.spring.SqlSessionTemplate">
         <constructor-arg ref="sqlSessionFactory"/>
     </bean>
 
     <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
-    <!--p:sqlSessionFactoryBeanName="sqlSessionFactory"-->
-    <!--p:basePackage="com.hong.dao.mybatis"-->
-    <!--lazy-init="true"/>-->
+        <!--p:sqlSessionFactoryBeanName="sqlSessionFactory"-->
+        <!--p:basePackage="com.hong.dao.mybatis"-->
+        <!--lazy-init="true"/>-->
         <property name="sqlSessionFactoryBeanName" value="sqlSessionFactory"/>
         <property name="basePackage" value="com.hong.dao.mybatis" />
     </bean>
@@ -151,21 +151,21 @@
     </bean>
 
     <!--<bean id="redisUtil" class="com.hong.utils.redis.RedisUtil" >-->
-        <!--<property name="redisTemplate" ref="redisTemplate"/>-->
-        <!--&lt;!&ndash; name属性的值,是用于等会的注解当中 &ndash;&gt;-->
-        <!--<property name="name" value="common" />-->
+    <!--<property name="redisTemplate" ref="redisTemplate"/>-->
+    <!--&lt;!&ndash; name属性的值,是用于等会的注解当中 &ndash;&gt;-->
+    <!--<property name="name" value="common" />-->
     <!--</bean>-->
 
     <cache:annotation-driven cache-manager="methodCacheInterceptor"/>
 
     <!--&lt;!&ndash;设置需要加入缓存的类或者方法&ndash;&gt;-->
     <!--<bean id="methodCachePointCut" class="org.springframework.aop.support.RegexpMethodPointcutAdvisor">-->
-        <!--<property name="advice" ref="methodCacheInterceptor"/>-->
-        <!--<property name="patterns">-->
-            <!--<list>-->
-                <!--<value>com.hong.service.*</value>-->
-            <!--</list>-->
-        <!--</property>-->
+    <!--<property name="advice" ref="methodCacheInterceptor"/>-->
+    <!--<property name="patterns">-->
+    <!--<list>-->
+    <!--<value>com.hong.service.*</value>-->
+    <!--</list>-->
+    <!--</property>-->
     <!--</bean>-->
 
 

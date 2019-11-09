@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="CompilerConfiguration">
+<<<<<<< HEAD
     <wildcardResourcePatterns>
       <entry name="!?*.java" />
       <entry name="!?*.form" />
@@ -15,11 +16,14 @@
       <entry name="!?*.js" />
       <entry name="!?*.html" />
     </wildcardResourcePatterns>
+=======
+>>>>>>> 4dc0be95625d89c2be28b144cc227f32f65e5590
     <annotationProcessing>
       <profile name="Maven default annotation processors profile" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+<<<<<<< HEAD
         <module name="hong" />
         <module name="ssm-maven" />
       </profile>
@@ -27,6 +31,14 @@
     <bytecodeTargetLevel target="1.8">
       <module name="hong" target="1.8" />
       <module name="ssm-maven" target="1.7" />
+=======
+        <module name="blog" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="blog" target="1.8" />
+      <module name="IntelliJ_project" target="1.5" />
+>>>>>>> 4dc0be95625d89c2be28b144cc227f32f65e5590
     </bytecodeTargetLevel>
   </component>
 </project>

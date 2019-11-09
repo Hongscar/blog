@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="FrameworkDetectionExcludesConfiguration">
+<<<<<<< HEAD
     <file type="web" url="file://$PROJECT_DIR$" />
     <file type="web" url="file://F:/ssm-demo-master/ssm-maven" />
   </component>
@@ -31,12 +32,20 @@
         </MavenCompilerTask>
       </set>
     </option>
+=======
+    <file type="web" url="file://$PROJECT_DIR$/../../../../IntelliJ_project/blog" />
+>>>>>>> 4dc0be95625d89c2be28b144cc227f32f65e5590
   </component>
   <component name="MavenProjectsManager">
     <option name="originalFiles">
       <list>
+<<<<<<< HEAD
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="F:/ssm-demo-master/ssm-maven/pom.xml" />
+=======
+        <option value="$PROJECT_DIR$/../../../../IntelliJ_project/pom.xml" />
+        <option value="$PROJECT_DIR$/../../../../IntelliJ_project/blog/pom.xml" />
+>>>>>>> 4dc0be95625d89c2be28b144cc227f32f65e5590
       </list>
     </option>
   </component>

@@ -94,7 +94,7 @@ public class TestController {
      * @return: org.springframework.web.servlet.ModelAndView
      * @Date: 2018/10/4 16:46
      */
-    @RequestMapping(value = "/mainPage.html")
+    @RequestMapping(value = {"/mainPage.html", "/"})
     public ModelAndView mainPage(HttpServletRequest request) {
         HttpSession session = request.getSession();
         System.out.println(session.getId());
@@ -205,6 +205,11 @@ public class TestController {
 
     }
 
+    @RequestMapping(value = "comment.html")
+    public String goToComments() {
+        return "comment";
+    }
+
     /**
      * @Description:
      * @param: [request]
@@ -212,20 +217,20 @@ public class TestController {
      * @Date: 2018/10/5 15:52
      */
     @RequestMapping(value = "addComment.html")
-    public String addComment(HttpServletRequest request) {
-        String name = request.getParameter("name");
-        String mailBox = request.getParameter("mail");
+    @ResponseBody
+    public void addComment(HttpServletRequest request) {
+        String name = request.getParameter("type");
+        String mailBox = request.getParameter("title");
         String content = request.getParameter("content");
         Comment comment = new Comment();
         comment.setTimestamp(new Timestamp(new Date().getTime()));
-        comment.setName(name);
-        comment.setMailBox(mailBox);
+        comment.setName(name);                  // type就是名字. 数据库一直
+        comment.setMailBox(mailBox);            // mainBox其实就是title啦,懒得改了(指db那里)
         comment.setContent(content);
         testService.addComment(comment);
-
         List<Comment> comments = testService.getAllComments();
         request.getSession().setAttribute("comments", comments);
-        return "index";
+        // return "index";
     }
 
     /**
@@ -273,6 +278,8 @@ public class TestController {
         modelAndView.addObject("articles1", articles);
         return modelAndView;
     }
+
+
 
     @RequestMapping("findArticleByType.html")
     @ResponseBody

@@ -53,6 +53,7 @@ public class Test_Service {
         return testMapper.getThreeArticles();
     }
 
+    @CacheEvict(value = "common", allEntries = true)
     public void addArticle(Article article) {
         testMapper.addArticle(article);
     }
@@ -119,7 +120,12 @@ public class Test_Service {
         return commentMapper.getComments();
     }
 
+    @CacheEvict(value = "common", allEntries = true)
     public void addComment(Comment comment) {
+        System.out.println("Comment标题:" + comment.getMailBox());
+        System.out.println("Comment名字:" + comment.getName());
+        System.out.println("Comment内容:" + comment.getContent());
+        System.out.println("时间:" + comment.getTimestamp());
         commentMapper.addComment(comment);
     }
 
@@ -127,6 +133,7 @@ public class Test_Service {
         return typeMapper.getTypes();
     }
 
+    @CacheEvict(value = "common", allEntries = true)
     public void addType(Type type) {
         typeMapper.addType(type);
     }

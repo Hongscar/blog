@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="Encoding" defaultCharsetForPropertiesFiles="UTF-8">
+<<<<<<< HEAD
     <file url="file://$PROJECT_DIR$" charset="UTF-8" />
     <file url="file://F:/ssm-demo-master/ssm-maven" charset="UTF-8" />
+=======
+>>>>>>> 4dc0be95625d89c2be28b144cc227f32f65e5590
     <file url="PROJECT" charset="UTF-8" />
   </component>
 </project>
