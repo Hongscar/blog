@@ -13,7 +13,6 @@
 
 
     <context:component-scan base-package="com.hong.service"/>
-    <!--<context:component-scan base-package="com.hong.utils"/>-->
 
     <bean id="keyGeneratorConfig" class="com.hong.dao.mybatis.ApplicationConfig"/>
 
@@ -23,6 +22,15 @@
             p:prefix="/WEB-INF/jsp/v1.1/"
             p:suffix=".jsp"
     />
+
+    <!-- 输入参数忽略大小写 -->
+    <bean id="caseInsensitiveRequestFilterProxy" class="org.springframework.web.filter.DelegatingFilterProxy">
+        <property name="targetBeanName" value="caseInsensitiveRequestFilter"/>
+    </bean>
+
+    <bean id="caseInsensitiveRequestFilter" class="com.hong.utils.CaseInsensitiveRequestParameterNameFilter">
+
+    </bean>
 
     <bean id="wall-filter-config" class="com.alibaba.druid.wall.WallConfig"
           init-method="init"
@@ -50,9 +58,9 @@
           destroy-method="close"
           p:filters="stat, log4j"
           p:driverClassName="com.mysql.jdbc.Driver"
-          p:url="your_db_url"
+          p:url="your_url"
           p:username="root"
-          p:password="your_root_password">
+          p:password="your_password">
         <!--<property name="driver" value="${jdbc.driverClassName}"/>-->
         <!--<property name="url" value="${jdbc.url}"/>-->
         <!--<property name="username" value="${jdbc.username}"/>-->
@@ -116,7 +124,7 @@
     <bean id="connectionFactory" class="org.springframework.data.redis.connection.jedis.JedisConnectionFactory">
         <property name="poolConfig" ref="poolConfig" />
         <property name="port" value="6379" />
-        <property name="hostName" value="your_hostName" />
+        <property name="hostName" value="your_url" />
         <property name="password" value="your_password" />
         <property name="timeout" value="100000" />
         <property name="database" value="0"/>

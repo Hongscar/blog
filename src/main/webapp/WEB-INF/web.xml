@@ -80,6 +80,16 @@
     <!-- 添加Web应用等监控-->
     <!--druid监控页面 -->
 
+    <!-- 忽略URL大小写 -->
+    <filter>
+        <filter-name>caseInsensitiveRequestFilterProxy</filter-name>
+        <filter-class>org.springframework.web.filter.DelegatingFilterProxy</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>caseInsensitiveRequestFilterProxy</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+
     <servlet>
         <servlet-name>music</servlet-name>
         <jsp-file>/WEB-INF/jsp/v1.1/music.jsp</jsp-file>

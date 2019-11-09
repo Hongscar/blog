@@ -13,8 +13,8 @@
     <script src="js/emoji.js">
     </script>
 
-    <embed src="The Wind Can Be Still.mp3"
-           autostart="true" loop="true" width="80" height="20" id="music1">
+    <%--<embed src="The Wind Can Be Still.mp3"--%>
+           <%--autostart="true" loop="true" width="80" height="20" id="music1">--%>
 
     <link rel="stylesheet" href="css/editormd.css"/>
     <script src="js/editormd.js"></script>
