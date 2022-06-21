@@ -247,7 +247,7 @@
   <properties>
     <spring.version>4.2.2.RELEASE</spring.version>
     <commons-dbcp.version>1.4</commons-dbcp.version>
-    <mysql.version>5.1.29</mysql.version>
+    <mysql.version>8.0.28</mysql.version>
     <servlet.version>3.0-alpha-1</servlet.version>
     <aspectj.version>1.8.1</aspectj.version>
     <testng.version>6.8.7</testng.version>
